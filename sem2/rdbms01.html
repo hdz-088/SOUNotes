@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SEM-II | RDBMS | Unit-01</title>
-    <link rel="stylesheet" href="../style.css" />
-    <link rel="shortcut icon" href="src/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/prism.css" />
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
     <style>
       main {
         display: flex;
@@ -96,15 +97,15 @@
   </head>
   <body>
     <nav>
-      <a href="about.html"
-        ><img class="menubar" src="../src/favicon.png" alt="menu" height="28px"
+      <a href="../about.html"
+        ><img class="menubar" src="assets/img/favicon.png" alt="menu" height="28px"
       /></a>
       <a class="logo" href="#">SOU BCA Notes</a>
       <a id="theme-toggle" onclick="modeSwitcher()">
         <img
           class="dlmode"
           id="theme-image"
-          src="src/light.png"
+          src="assets/img/light.png"
           alt="mode"
           height="28px"
       /></a>
@@ -139,7 +140,7 @@
         </li>
         <br />
         <div class="images">
-          <img src="src/rdbms-01-01.png" height="270px" />
+          <img src="assets/img/rdbms-01-01.png" height="270px" />
         </div>
         <br />
         <hr />
@@ -186,18 +187,21 @@
         <br />
         <li>Typically, each block performs a logical action in the program.</li>
         <br />
-        <div class="language">
-          <pre><code>DECLARE
--- Declaration Statements (optional) --
-BEGIN
--- Executable Statements(mandatory) --
-EXCEPTION
--- Exception Handling Statements(optional) --
-END;</code></pre>
+        <div>
+          <pre><code class="language-js">getLanguage: function (e) {
+  for (; e; ) {
+    var t = n.exec(e.className);
+    if (t) return t[1].toLowerCase();
+    e = e.parentElement;
+  }
+return "none";
+},</code></pre>
         </div>
       </div>
     </main>
-    <a class="dlbtn" href="src/RDBMS01.pdf"><img src="../src/download.png" height="50px" /></a>
+    <a class="dlbtn" href="assets/RDBMS01.pdf"
+      ><img src="assets/img/download.png" height="50px"
+    /></a>
     <div class="end">
       <div class="footer">
         <p>
@@ -206,6 +210,7 @@ END;</code></pre>
         </p>
       </div>
     </div>
-    <script src="../src/script.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/prism.js"></script>
   </body>
 </html>
