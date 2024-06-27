@@ -3,16 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About | SOUNotes</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
+    <title>About | SOU Notes</title>
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/css/global.css" />
   </head>
   <body>
+    <!-- START NAVIGATION BAR -->
     <nav>
       <a href="about.html"
-        ><img class="menubar" src="assets/img/favicon.png" alt="menu" height="28px"
+        ><img
+          class="menubar"
+          src="assets/img/favicon.png"
+          alt="menu"
+          height="28px"
+          style="margin-right: 10px"
       /></a>
-      <a class="logo" href="index.html">SOU BCA Notes</a>
+      <a class="logo" href="#">SOU BCA Notes</a>
       <a id="theme-toggle" onclick="modeSwitcher()">
         <img
           class="dlmode"
@@ -22,8 +32,11 @@
           height="28px"
       /></a>
     </nav>
-    <div id="brdcrmbs">
-      <a href="index.html"><u>Home</u></a>/
+    <!-- END NAVIGATION BAR -->
+    <!-- START BODY -->
+    <div id="breadcrumbs">
+      <a href="index.html"><u>Home</u></a
+      >&nbsp&gt&nbsp
       <a href="about.html"><u>About</u></a>
     </div>
     <div id="bigbox">
@@ -42,7 +55,11 @@
       <div id="container">
         <div class="card">
           <a href="https://forms.gle/XEWTu6Fnew56SBYKA">
-            <img src="assets/img/feedback.png" alt="" height="200px" />Feedback</a
+            <img
+              src="assets/img/feedback.png"
+              alt=""
+              height="200px"
+            />Feedback</a
           >
         </div>
         <div class="card">
@@ -58,13 +75,22 @@
         </div>
       </div>
     </div>
+    <!-- END BODY -->
+    <!-- START FOOTER -->
     <div class="end">
       <div class="footer">
         <p>
-          Made by <a href="about.html"><u>SOU Student</u></a> For SOU Students
+          Made by
+          <a
+            href="about.
+            html"
+            ><u>SOU Student</u></a
+          >
+          For SOU Students
         </p>
       </div>
     </div>
-    <script src="assets/js/script.js"></script>
+    <!-- END FOOTER -->
+    <script src="assets/js/global.js"></script>
   </body>
 </html>
