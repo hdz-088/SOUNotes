@@ -61,3 +61,9 @@ function smpNotes() {
     "SMP Notes are only available in our Telegram Channel @soubca. https://t.me/soubca"
   );
 }
+
+function unavlNotes() {
+  alert(
+    "Notes are not available yet. Join our Telegram Channel @soubca(https://t.me/soubca) for updates."
+  );
+}
