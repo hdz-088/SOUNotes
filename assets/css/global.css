@@ -17,7 +17,7 @@ html[data-theme="light"] {
   --code-color: #a8a8a8;
   --code-bgcolor: #040404;
   --toc-bgcolor: #768afd;
-  /* --notes-bgcolor: ; */
+  /* --notes-bgcolor: #e6e9ef; */
   --cards-bgcolor: #fff;
   --footer-bgcolor: #dce0e8;
   --nav-bgcolor: #dce0e8;
@@ -74,7 +74,7 @@ html[data-theme="dark"] {
     --code-color: #d8d8d8;
     --code-bgcolor: #444444;
     --toc-bgcolor: #768afdb2;
-    --notes-bgcolor: #e4e4e463;
+    --notes-bgcolor: #eff1f5;
     --cards-bgcolor: #fff;
     --footer-bgcolor: #dce0e8;
     --nav-bgcolor: #dce0e8;
