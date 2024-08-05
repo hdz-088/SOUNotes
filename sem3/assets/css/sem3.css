@@ -71,7 +71,8 @@ main {
   text-align: center;
 }
 
-ul, ol {
+ul,
+ol {
   padding-left: 12px;
 }
 
@@ -88,6 +89,24 @@ br {
   content: "";
   display: block;
   height: 10px;
+}
+
+table {
+  /* border: 1px solid var(--table-border); */
+  text-align: center;
+  width: 100%;
+}
+
+th,
+tr,
+td {
+  border: 1px dashed var(--table-border);
+  border-radius: 10px;
+}
+
+pre,
+code {
+  border-radius: 15px;
 }
 
 @media (min-width: 768px) {

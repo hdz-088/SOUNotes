@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit-01 | Java | SOUNotes</title>
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/sem3.css" />
+    <link rel="stylesheet" href="assets/css/prism.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.png"
+      type="image/x-icon"
+    />
+    <style>
+      strong {
+        color: #db380e;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="../about.html"
+        ><img
+          class="menubar"
+          src="assets/img/favicon.png"
+          alt="menu"
+          height="28px"
+      /></a>
+      <a class="logo" href="../index.html">SOU BCA Notes</a>
+      <a id="theme-toggle" onclick="modeSwitcher()">
+        <img
+          class="dlmode"
+          id="theme-image"
+          src="assets/img/light.png"
+          alt="mode"
+          height="28px"
+      /></a>
+    </nav>
+    <div id="breadcrumbs">
+      <a href="../index.html"><u>Home</u></a
+      >/ <a href="sem3.html"><u>Sem-III</u></a
+      >/ <a href="sem3.html#java"><u>Java</u></a
+      >/ <a href="java1.html"><u>01: Java Introduction</u></a
+      >/
+    </div>
+    <main>
+      <div class="toc">
+        <center><b>Table of Content</b></center>
+        <br />
+        01: <u><a href="#head1">Principles of OOP</a><br /></u> 02:
+        <u><a href="#head2">Java Essentials</a><br /></u> 03:
+        <u><a href="#head3">Java Compilation Process</a><br /></u>
+        04: <u><a href="#head4">Java Virtual Machine</a><br /></u> 05:
+        <u><a href="#head5">Just In Time (JIT)</a><br /></u> 06:
+        <u><a href="#head6">First Simple Program</a><br /></u> 07:
+        <u><a href="#head7">Java Program Structure</a><br /></u> 08:
+        <u><a href="#head8">Variables</a><br /></u> 09:
+        <u><a href="#head9">Data Types</a><br /></u> 10:
+        <u><a href="#head10">Identifiers</a><br /></u> 11:
+        <u><a href="#head11">Literals</a><br /></u> 12:
+        <u><a href="#head12">Operators</a><br /></u> 13:
+        <u><a href="#head13">Precedence in Java</a><br /></u> 14:
+        <u><a href="#head14">Decision Making Statements</a><br /></u> 15:
+        <u><a href="#head15">Loops</a><br /></u> 16:
+        <u><a href="#head16">Jump Statements</a><br /></u> 17:
+        <u><a href="#head17">Class</a><br /></u> 18:
+        <u><a href="#head18">Instance Variable</a><br /></u> 19:
+        <u><a href="#head19">Constructor</a><br /></u>
+      </div>
+      <div class="page">
+        <h1 id="head1">Principles of Object Oriented Language</h1>
+        <br />
+        <p><strong>Abstraction</strong></p>
+        <ul>
+          <li>
+            An essential element of object-oriented programming is abstraction.
+          </li>
+          <li>Humans manage complexity through abstraction.</li>
+          <li>
+            For example, people do not think of a car as a set of tens of
+            thousands of individual parts.
+          </li>
+          <li>
+            They think of it as a well-defined object with its own unique
+            behaviour
+          </li>
+          <li>
+            This abstraction allows people to use a car to drive to the grocery
+            store without being overwhelmed by the complexity of the parts that
+            form the car.
+          </li>
+          <li>
+            They can ignore the details of how the engine, transmission, and
+            braking systems work.
+          </li>
+          <li>Instead, they are free to utilize the object as a whole.</li>
+        </ul>
+        <br />
+        <p><strong>Encapsulation</strong></p>
+        <ul>
+          <li>
+            Encapsulation is the mechanism that binds together code and the data
+            it manipulates, and keeps both safe from outside interference and
+            misuse.
+          </li>
+          <li>
+            One way to think about encapsulation is as a protective wrapper that
+            prevents the code and data from being arbitrarily accessed by other
+            code defined outside the wrapper.
+          </li>
+          <li>
+            Access to the code and data inside the wrapper is tightly controlled
+            through a well-defined interface.
+          </li>
+          <li>
+            To relate this to the real world, consider the automatic
+            transmission on an automobile.
+          </li>
+          <li>
+            It encapsulates hundreds of bits of information about your engine,
+            such as how much you are accelerating, the pitch of the surface you
+            are on, and the position of the shift lever.
+          </li>
+          <li>
+            You, as the user, have only one method of affecting this complex
+            encapsulation: by moving the gear-shift lever.
+          </li>
+          <li>
+            You can&#39;t affect the transmission by using the turn signal or
+            windshield wipers, for example.
+          </li>
+          <li>
+            Thus, the gear-shift lever is a well-defined (indeed, unique)
+            interface to the transmission.
+          </li>
+          <li>
+            Further, what occurs inside the transmission does not affect objects
+            outside the transmission.
+          </li>
+          <li>For example, shifting gears does not turn on the headlights!</li>
+        </ul>
+        <br />
+        <p><strong>Inheritance</strong></p>
+        <ul>
+          <li>
+            Inheritance is the process by which one object acquires the
+            properties of another object.
+          </li>
+          <li>
+            This is important because it supports the concept of hierarchical
+            (that is, top-down) classification.
+          </li>
+          <li>
+            For example, a Golden Retriever is part of the classification dog,
+            which in turn is part of the mammal class, which is under the larger
+            class animal.
+          </li>
+          <li>
+            Without the use of hierarchies, each object would need to define all
+            of its characteristics explicitly.
+          </li>
+          <li>
+            However, by use of inheritance, an object need only define those
+            qualities that make it unique within its class.
+          </li>
+          <li>It can inherit its general attributes from its parent.</li>
+          <li>
+            Thus, it is the inheritance mechanism that makes it possible for one
+            object to be a specific instance of a more general case.
+          </li>
+        </ul>
+        <br />
+        <p><strong>Polymorphism</strong></p>
+        <ul>
+          <li>
+            Polymorphism (from the Greek, meaning &quot;many forms&quot;) is a
+            feature that allows one interface to be used for a general class of
+            actions.
+          </li>
+          <li>
+            The specific action is determined by the exact nature of the
+            situation.
+          </li>
+          <li>
+            Extending the dog analogy, a dog&#39;s sense of smell is
+            polymorphic. If the dog smells a cat, it will bark and run after it.
+            If the dog smells its food, it will salivate and run to its bowl.
+            The same sense of smell is at work in both situations.
+          </li>
+          <li>
+            The difference is what is being smelled, that is, the type of data
+            being operated upon by the dog&#39;s nose! This same general concept
+            can be implemented in Java as it applies to methods within a Java
+            program.
+          </li>
+        </ul>
+        <br /><br />
+        <h1 id="head2">Java Essentials</h1>
+        <br />
+        <p><strong>Syntax</strong>:</p>
+        <ul>
+          <li>
+            The core topics for Java syntax include:
+            <ul>
+              <li>What is an Object</li>
+              <li>What is a Class</li>
+              <li>What is a variable</li>
+              <li>What is a method</li>
+              <li><code>System.out.println()</code> method</li>
+              <li>Primitive types</li>
+              <li>String</li>
+              <li>Basic arithmetic and logical operators</li>
+              <li>if-else statement</li>
+              <li>Loop statements</li>
+              <li>Arrays</li>
+            </ul>
+          </li>
+        </ul>
+        <br />
+        <p><strong>Object Oriented Programming:</strong></p>
+        <ul>
+          <li>Java programming is mostly about object oriented.</li>
+          <li>
+            This is the reason when you are starting out with Java, you must
+            have a good understanding of OOP.
+          </li>
+          <li>
+            This won’t be difficult to learn, but it involves a lot of practice.
+          </li>
+          <li>
+            Begin by understanding what an object is, how diverse attributes can
+            be and how these are presented in Java.
+          </li>
+        </ul>
+        <br />
+        <p><strong>Collection Framework:</strong></p>
+        <ul>
+          <li>
+            It offers an architecture to collect and exploit groups of objects.
+          </li>
+          <li>
+            By utilising collections you can perform specific data operations
+            such as modification, insertion, deletion, etc.
+          </li>
+          <li>
+            Knowledge of collection is considered crucial for interviews as well
+            as live projects.
+          </li>
+          <li>
+            Often during an interview, you will be required to steer through
+            collections and their features.
+          </li>
+        </ul>
+        <br />
+        <p><strong>Exceptions:</strong></p>
+        <ul>
+          <li>
+            It is an unusual situation, but you should learn about them and it
+            is not that complex.
+          </li>
+          <li>
+            It is a great way for simplifying bug detection and widely used by
+            Java programmers.
+          </li>
+        </ul>
+        <br />
+        <p><strong>Generics:</strong></p>
+        <ul>
+          <li>
+            Generics facilitate an alternative to rigid definitions of the types
+            of use. At first you won’t find this topic complicated. The more
+            grasp you have on this the better you will be able to code.
+          </li>
+        </ul>
+        <br />
+        <p><strong>Multithreading:</strong></p>
+        <ul>
+          <li>
+            This can be difficult to learn for beginners. However, it is not
+            considered an essential topic to master especially during
+            interviews. As a beginner you might not be actually applying
+            multithreading in any project but it will come handy later on.
+          </li>
+        </ul>
+        <br /><br />
+        <h1 id="head3">Java Compilation Process</h1>
+        <br />
+        <div class="images">
+          <img src="assets/img/1java01.png" width="90%" />
+        </div>
+        <br /><br />
+        <h1 id="head4">Java Virtual Machine</h1>
+        <br />
+        <ul>
+          <li>
+            The key that allows Java to solve both the security and the
+            portability problems just described is that the output of a Java
+            compiler is not executable code. Rather, it is
+            <strong>bytecode</strong>.
+          </li>
+          <li>
+            Bytecode is a highly optimized set of instructions designed to be
+            executed by the Java run-time system, which is called the
+            <strong>Java Virtual Machine</strong> (JVM).
+          </li>
+          <li>
+            That is, in its standard form, the JVM is an interpreter for
+            bytecode.
+          </li>
+        </ul>
+        <br /><br />
+        <h1 id="head5">Just In Time (JIT)</h1>
+        <br />
+        <ul>
+          <li>
+            Although Java was designed for interpretation, there is technically
+            nothing about Java that prevents on-the-fly compilation of bytecode
+            into native code.
+          </li>
+          <li>
+            Along these lines, Sun has just completed its Just In Time (JIT)
+            compiler for bytecode, which is included in the Java 2 release.
+          </li>
+          <li>
+            When the JIT compiler is part of the JVM, it compiles bytecode into
+            executable code in real time, on a piece-by-piece, demand basis.
+          </li>
+          <li>
+            It is important to understand that it is not possible to compile an
+            entire Java program into executable code all at once, because Java
+            performs various run-time checks that can be done only at run time.
+          </li>
+          <li>
+            Instead, the JIT <strong>compiles code as it is needed</strong>,
+            during execution. However, the just-in-time approach still yields a
+            significant performance boost.
+          </li>
+          <li>
+            Even when dynamic compilation is applied to bytecode, the
+            portability and safety features still apply, because the run-time
+            system (which performs the compilation) still is in charge of the
+            execution environment.
+          </li>
+          <li>
+            Whether your Java program is actually interpreted in the traditional
+            way or compiled on-the-fly, its functionality is the same.
+          </li>
+        </ul>
+        <br /><br />
+        <h1 id="head6">First Simple Program</h1>
+        <br />
+        <pre><code class="language-java">// Example.java
+
+class FirstProgram
+{
+	// Your program begins with a call to main().
+	public static void main(String args[])
+	{
+		 System.out.println("Hello World");
+	 }
+}</code></pre>
+        <ul>
+          <li>
+            The first line <code>Class FirstProgram</code> declares a class,
+            which is an object-oriented construct.
+          </li>
+          <li>
+            As stated earlier, java is true object oriented language and
+            therefore, everything must be placed inside a class.
+          </li>
+          <li>
+            Every class definition in java begins with an opening brace
+            <code>{</code> and ends with a matching closing brace <code>}</code>
+          </li>
+          <li>
+            The third line
+            <code>public static void main(String args[])</code> defines a method
+            named main. Conceptually, this is similar to the main() function in
+            C/C++.
+          </li>
+        </ul>
+        <div class="images">
+          <img src="assets/img/1java02.png" width="90%" />
+        </div>
+        <ul>
+          <li>
+            Every java application program must include the
+            <code>main()</code> method.
+          </li>
+          <li>
+            The keyword <code>public</code> is an access specifier that declares
+            the main method as unprotected and therefore making it accessible to
+            all other classes
+          </li>
+          <li>
+            The keyword <code>static</code> declares this method as one that
+            belongs to the entire class and not a part of any objects of the
+            class.
+          </li>
+          <li>
+            The type modifier <code>void</code> states that the main method does
+            not return any value
+          </li>
+          <li>
+            All parameters to a method are declared inside a pair of
+            parentheses. Here, <code>String a[]</code> declares a parameter
+            named <code>a</code> ,which contains an array of objects of the
+            class type String.
+          </li>
+          <li>
+            This is the starting point for the interpreter to begin the
+            execution of the program.
+          </li>
+          <li>
+            A java application can have any number of classes but only one of
+            them must include a main method to initiate the execution.
+          </li>
+        </ul>
+        <br /><br />
+        <h1 id="head7">Java Program Structure</h1>
+        <br />
+        <ul>
+          <li>
+            A Java program may contain many classes of which only one class
+            defines a main method.
+          </li>
+          <li>
+            Classes contain data members and methods that operate on the data
+            members of the class.
+          </li>
+          <li>
+            Method may contain data type declarations and executable statements.
+          </li>
+          <li>
+            To write a java program, we first define classes and then put them
+            together.
+          </li>
+        </ul>
+        <br />
+        <div class="images">
+          <img src="assets/img/1java03.png" width="90%" />
+        </div>
+        <br />
+        <ul>
+          <li>
+            <strong>Documentation Section:</strong>
+            <ul>
+              <li>
+                The documentation section comprises a set of comment lines
+                giving the name of the program, the author and other details.
+              </li>
+              <li>Comments would greatly help in maintaining the program.</li>
+              <li>
+                Java uses a third style of comment <code>/**...*/</code> known
+                as documentation comment.
+              </li>
+              <li>
+                This form of comment is used for generating documentation
+                automatically.
+              </li>
+            </ul>
+          </li>
+          <br />
+          <li>
+            <strong>Package Statement:</strong>
+            <ul>
+              <li>
+                The First statement allowed in java file is a package statement.
+              </li>
+              <li>
+                This statement declares a package name and informs the compiler
+                that the classes defined here belong to this package.
+              </li>
+              <li>Example: <code>package student;</code></li>
+            </ul>
+          </li>
+          <br />
+          <li>
+            <strong>Import Statements:</strong>
+            <ul>
+              <li>
+                The next thing after a package statement (but before any class
+                definition) may be a number of import statements.
+              </li>
+              <li>Example: <code>Import student.test;</code></li>
+              <li>
+                This statement instructs the interpreter to load the test class
+                contained in the package student.
+              </li>
+              <li>
+                Using import statements, we can have access to classes that are
+                part of other named packages.
+              </li>
+            </ul>
+          </li>
+          <br />
+          <li>
+            <strong>Interface Statements:</strong>
+            <ul>
+              <li>
+                An interface is like a class but includes a group of method
+                declarations.
+              </li>
+              <li>
+                It is used only when we wish to implement the multiple
+                inheritance feature in the program.
+              </li>
+            </ul>
+          </li>
+          <br />
+          <li>
+            <strong>Class Definitions:</strong>
+            <ul>
+              <li>A java program may contain multiple class definitions.</li>
+              <li>
+                Classes are the primary and essential elements of a java
+                program.
+              </li>
+              <li>
+                The number of classes used depends on the complexity of the
+                problem.
+              </li>
+            </ul>
+          </li>
+          <br />
+          <li>
+            <strong>Main Method Class:</strong>
+            <ul>
+              <li>
+                Every java program requires a main method as its starting point,
+                this class is the essential part of a java program.
+              </li>
+              <li>A simple java program may contain only this part.</li>
+              <li>
+                The main method creates objects of various classes and
+                establishes communications between them.
+              </li>
+              <li>On reaching the end of main the program terminates.</li>
+            </ul>
+          </li>
+        </ul>
+        <br /><br />
+        <h1 id="head8">Variables</h1>
+        <br />
+        <ul>
+          <li>
+            The variable is the <strong>basic unit of storage</strong> in a Java
+            program.
+          </li>
+          <li>
+            A variable is defined by the combination of an identifier, a type,
+            and an optional initializer.
+          </li>
+          <li>
+            In addition, all variables have a scope, which defines their
+            visibility, and a lifetime.
+          </li>
+          <li>
+            In Java, all variables must be declared before they can be used.
+          </li>
+          <li>
+            The basic form of a variable declaration is :
+            <code>type identifier = value;</code>
+          </li>
+          <li>Example: <code>int num = 10;</code></li>
+        </ul>
+        <br />
+        <p><strong>Dynamic Initialization:</strong></p>
+        <ul>
+          <li>
+            Although the preceding examples have used only constants as
+            initializers, Java allows variables to be initialized dynamically,
+            using any expression valid at the time the variable is declared.
+          </li>
+          <li>For example</li>
+        </ul>
+        <pre><code class="language-java">// Demonstrate dynamic initialization.
+
+class DynInit {
+	public static void main(String args[]) {
+		double a = 3.0, b = 4.0;
+		
+		// c is dynamically initialized
+		double c = Math.sqrt(a * a + b * b);
+		System.out.println("Hypotenuse is " + c);
+	}
+}</code></pre>
+        <br /><br />
+        <h1 id="head9">Data Types</h1>
+        <br />
+        <div class="images">
+          <img src="assets/img/1java04.png" width="90%" />
+        </div>
+        <br />
+        <ul>
+          <li>
+            Primitive Data Types:
+            <ul>
+              <li>
+                Java defines eight simple (or elemental) types of data: byte,
+                short, int, long, char, float, double, and Boolean. These can be
+                put in four groups
+              </li>
+              <li>
+                <strong>Integers</strong> This group includes byte, short, int,
+                and long, which are for whole-valued signed numbers.
+              </li>
+              <li>
+                <strong>Floating-point</strong> numbers This group includes
+                float and double, which represent numbers with fractional
+                precision.
+              </li>
+              <li>
+                <strong>Characters</strong> This group includes char, which
+                represents symbols in a character set, like letters and numbers.
+              </li>
+              <li>
+                <strong>Boolean</strong> This group includes Boolean, which is a
+                special type for representing true/false values.
+              </li>
+            </ul>
+          </li>
+          <br />
+          <li>
+            Non-Primitive Data Type:
+            <ul>
+              <li>
+                <strong>Class</strong> contains a set of properties and methods
+                that are common and exhibited by all the
+                <strong>objects</strong> of the class.
+              </li>
+              <li>
+                <strong>Array</strong> are used to store elements of the same
+                data type in a contiguous manner
+              </li>
+              <li>
+                <strong>Interface</strong> in Java is a tool to achieve
+                abstraction. Interface can contain non-implemented methods
+                (without the method body) also known as abstract methods.
+              </li>
+              <li>
+                <strong>Strings</strong> are capable of containing sequences of
+                characters within a single variable
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <br /><br />
+        <h1 id="head10">Identifiers</h1>
+        <br />
+        <ul>
+          <li>
+            Identifiers are used for <strong>class names</strong>, method names,
+            and variable names.
+          </li>
+          <li>
+            An identifier may be any descriptive sequence of uppercase and
+            lowercase letters, numbers, or the underscore and dollar-sign
+            characters.
+          </li>
+          <li>
+            They must not begin with a number, lest they be confused with a
+            numeric literal.
+          </li>
+          <li>
+            Again, Java is case-sensitive, so <code>VALUE</code> is a different
+            identifier than <code>Value</code>.
+          </li>
+        </ul>
+        <br /><br />
+        <h1 id="head11">Literals</h1>
+        <br />
+        <ul>
+          <li>
+            A <strong>constant value</strong> in Java is created by using a
+            literal representation of it.
+          </li>
+          <li>
+            For example, here are some literals: <code>100</code>
+            <code>98.6</code> <code>&#39;X&#39;</code>
+            <code>&quot;This is a test&quot;</code>
+          </li>
+          <li>
+            The first literal specifies an integer, the next is a floating-point
+            value, the third is a character constant, and the last is a string.
+          </li>
+          <li>A literal can be used anywhere a value of its type is allow</li>
+        </ul>
+        <br /><br />
+        <h1 id="head12">Operators</h1>
+        <br />
+        <p><strong>Unary Operator</strong></p>
+        <table>
+          <thead>
+            <tr>
+              <th>Symbol</th>
+              <th>Operator Name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>Unary Minus</td>
+              <td>It is used to denote a <strong>negative</strong> value.</td>
+            </tr>
+            <tr>
+              <td>+</td>
+              <td>Unary Plus</td>
+              <td>It is used to denote a <strong>positive</strong> value.</td>
+            </tr>
+            <tr>
+              <td>- -</td>
+              <td>Decrement Operator</td>
+              <td><strong>Decrements</strong> value by 1</td>
+            </tr>
+            <tr>
+              <td>++</td>
+              <td>Increment Operator</td>
+              <td><strong>Increments</strong> value by 1</td>
+            </tr>
+            <tr>
+              <td>!</td>
+              <td>Logical Complement Operator</td>
+              <td><strong>Reverse</strong> the value of boolean variable</td>
+            </tr>
+          </tbody>
+        </table>
+        <br /><br />
+        <strong>Arithmetic Operators</strong>
+        <table>
+          <thead>
+            <tr>
+              <th>Operator Name</th>
+              <th>Operator</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Addition Operator</td>
+              <td>+</td>
+              <td>Addition of two numbers</td>
+            </tr>
+            <tr>
+              <td>Subtraction Operator</td>
+              <td>-</td>
+              <td>Subtraction of two numbers</td>
+            </tr>
+            <tr>
+              <td>Multiplication Operator</td>
+              <td>*</td>
+              <td>Multiplication of two numbers</td>
+            </tr>
+            <tr>
+              <td>Division Operator</td>
+              <td>/</td>
+              <td>Division of two numbers</td>
+            </tr>
+            <tr>
+              <td>Modulus Operator</td>
+              <td>%</td>
+              <td>Return remainder after dividing two numbers</td>
+            </tr>
+          </tbody>
+        </table>
+        <br /><br />
+        <strong>Assignment Operators</strong>
+        <table>
+          <thead>
+            <tr>
+              <th>Operator</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>=</td>
+              <td>To assign a value</td>
+            </tr>
+            <tr>
+              <td>+=</td>
+              <td>To add a value</td>
+            </tr>
+            <tr>
+              <td>-=</td>
+              <td>To subtract a value</td>
+            </tr>
+            <tr>
+              <td>*=</td>
+              <td>To multiply a value</td>
+            </tr>
+            <tr>
+              <td>/=</td>
+              <td>To divide a value</td>
+            </tr>
+          </tbody>
+        </table>
+        <br /><br />
+        <strong>Relational Operators</strong>
+        <table>
+          <thead>
+            <tr>
+              <th>Operator</th>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>==</td>
+              <td>Equal to</td>
+            </tr>
+            <tr>
+              <td>!=</td>
+              <td>Not equal</td>
+            </tr>
+            <tr>
+              <td>&gt;</td>
+              <td>Greater than</td>
+            </tr>
+            <tr>
+              <td>&lt;</td>
+              <td>Less than</td>
+            </tr>
+            <tr>
+              <td>&gt;=</td>
+              <td>Greater than or equal to</td>
+            </tr>
+            <tr>
+              <td>&lt;=</td>
+              <td>Less than or equal to</td>
+            </tr>
+          </tbody>
+        </table>
+        <br /><br />
+        <strong>Logical Operator</strong>
+        <table>
+          <thead>
+            <tr>
+              <th>Operator</th>
+              <th>Example</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Logical AND</td>
+              <td>cond1 &amp;&amp; cond2</td>
+              <td>Returns true only if both cond1 and cond2 are true</td>
+            </tr>
+            <tr>
+              <td>Logical OR</td>
+              <td>cond1 \ cond2</td>
+              <td>Returns true if atleast one of cond1 and cond2 is true</td>
+            </tr>
+            <tr>
+              <td>Logical NOT</td>
+              <td>!cond</td>
+              <td>Returns the opposite of input argument cond</td>
+            </tr>
+            <tr>
+              <td>Logical XOR</td>
+              <td>cond1 ^ cond2</td>
+              <td>Returns true only if cond1 and cond2 are different</td>
+            </tr>
+          </tbody>
+        </table>
+        <br /><br />
+        <strong>Bitwise Operators</strong>
+        <table>
+          <thead>
+            <tr>
+              <th>Operators</th>
+              <th>Symbol</th>
+              <th>Uses</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Bitwise AND</td>
+              <td>&amp;</td>
+              <td>num1 &amp; num2</td>
+            </tr>
+            <tr>
+              <td>Bitwise Exclusive OR (XOR)</td>
+              <td>^</td>
+              <td>num1 ^ num2</td>
+            </tr>
+            <tr>
+              <td>Bitwise Inclusive OR</td>
+              <td>\</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Bitwise Complement</td>
+              <td>~</td>
+              <td>~ num</td>
+            </tr>
+            <tr>
+              <td>Bitwise Left shift</td>
+              <td>&lt;&lt;</td>
+              <td>num1 &lt;&lt; num2</td>
+            </tr>
+            <tr>
+              <td>Bitwise Right shift</td>
+              <td>&gt;&gt;</td>
+              <td>num1 &gt;&gt; num2</td>
+            </tr>
+            <tr>
+              <td>Unsigned Right Shift Operator</td>
+              <td>&gt;&gt;&gt;</td>
+              <td>num1&gt;&gt;&gt;num2</td>
+            </tr>
+          </tbody>
+        </table>
+        <br /><br />
+        <strong>Ternary Operator</strong>
+        <ul>
+          <li>
+            Syntax:
+            <code>Variable = Condition ? Expression1 : Expression2</code>
+          </li>
+        </ul>
+        <br /><br />
+        <h1 id="head13">Precedence in Java</h1>
+        <br />
+        <div class="images">
+          <img src="assets/img/1java05.png" width="100%" />
+        </div>
+        <br /><br />
+        <h1 id="head14">Decision Making Statements</h1>
+        <br />
+        <ul>
+          <li>
+            <code>if</code> Statement:
+            <ul>
+              <li>
+                It tells the program to execute a certain section of code only
+                if a particular test evaluates to <code>true</code>.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <pre><code class="language-java">// if statement
+int x = 16; 
+if(x > 0){
+    System.out.println(“x is greater than 0”);
+}</code></pre>
+        <ul>
+          <li>
+            <code>if-else</code> Statement
+            <ul>
+              <li>
+                The <code>if-else</code> statement provides a secondary path of
+                execution when an <code>if</code> clause evaluates to
+                <code>false</code>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <pre><code class="language-java">// if-else statement
+int x = 16; 
+if(x > 0){
+    System.out.println(“x is greater than 0”);
+} else {
+    System.out.println(“x less than 0”);
+}
+</code></pre>
+        <ul>
+          <li>
+            <p>Nested <code>if-else</code> Statement:</p>
+            <ul>
+              <li>
+                Nesting of <code>if-else</code> means one
+                <code>if-else</code> or simple <code>if</code> as the statement
+                part of another <code>if-els</code>e or simple
+                <code>if</code> statement
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><code>switch case</code> Statement:</p>
+            <ul>
+              <li>
+                The <code>switch</code> statement allows for any number of
+                possible execution paths.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <pre><code class="language-java">// switch statement
+switch(num)
+{
+  case0:
+    System.out.println(“You have entered ZERO\n”);
+    break;
+  case1:
+    System.out.println(“You have entered ONE\n”);
+    break;
+  case2:
+    System.out.println(“You have entered TWO\n”);
+    break;
+  default:
+    System.out.println(“Other than 0,1,2\n”);
+}
+</code></pre>
+        <br /><br />
+        <h1 id="head15">Loops</h1>
+        <br />
+        <ul>
+          <li>
+            <code>while</code> Loop
+            <ul>
+              <li>
+                The <code>while</code> statement continually executes a block of
+                statements while a particular condition is <code>true</code>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <pre><code class="language-java">// while loop
+int t=1;
+while(t<=10){
+  System.out.print(t+” “);
+  t++;
+}
+</code></pre>
+        <ul>
+          <li>
+            <code>do...while</code> Loop
+            <ul>
+              <li>
+                It is similar to while loop with the difference that condition
+                is checked at the end, instead of being checked at the
+                beginning.
+              </li>
+              <li>
+                Just because of this the do-while loop is called bottom-testing
+                loop or exit controlled loop
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <pre><code class="language-java">// do...while Loop
+int t=1;
+do{
+  System.out.print(“ “+t);
+  t++;
+} while(t<=10);
+</code></pre>
+        <ul>
+          <li>
+            <code>for</code> Loop
+            <ul>
+              <li>
+                The <code>for</code> statement provides a compact way to iterate
+                over a range of values
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <pre><code class="language-java">// for Loop
+for(t=100;t>=10;t=t-10){
+  System.out.print(“ “+t);
+}
+</code></pre>
+        <br /><br />
+        <h1 id="head16">Jump Statements</h1>
+        <br />
+        <ul>
+          <li>
+            <code>break</code> Statement
+            <ul>
+              <li>
+                The <code>break</code> statement is used to come out early from
+                a loop without waiting for the condition to become
+                <code>false</code>.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <pre><code class="language-java">// break Statement
+int x=1;
+while(x<=5){
+	if(x==3){
+		break;
+	}
+	System.out.println(“Inside the loop “+x);
+	x++;
+}
+System.out.println(“Outside the loop “+x); 
+</code></pre>
+        <ul>
+          <li>
+            <code>continue</code> Statement
+            <ul>
+              <li>
+                The <code>continue</code> statement causes the remainder of the
+                statements following continue to be skipped and continue with
+                the next iteration of loop.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <pre><code class="language-java">// continue Statement
+int t=0;
+while(t<=10) {
+	t++;
+	if(t%2!=0){
+		continue;
+	}
+	System.out.println(“ “+t);
+}
+</code></pre>
+        <br /><br />
+        <h1 id="head17">Class</h1>
+        <br />
+        <ul>
+          <li>
+            A class is a <strong>collection of objects of similar type</strong>.
+            Once a class is defined, any number of objects can be produced which
+            belong to that class.
+          </li>
+          <li>
+            Classes provide a convenient method for packing together a group of
+            logically related data items and functions that work on them.
+          </li>
+          <li>
+            In java, the data items are called <strong>fields</strong> and the
+            functions are called <strong>methods</strong>.
+          </li>
+          <li>
+            <strong>Objects</strong> are instances of the Class. Classes and
+            Objects are very much related to each other. Without objects you
+            can&#39;t use a class.
+          </li>
+        </ul>
+        <pre><code class="language-java">// Class Declaration
+class classname {
+	//ClassBody
+}
+</code></pre>
+        <br /><br />
+        <h1 id="head18">Instance Variable</h1>
+        <br />
+        <ul>
+          <li>All variables are also known as instance variable.</li>
+          <li>
+            This is because of the fact that each instance or object has its own
+            copy of values for the variables.
+          </li>
+          <li>
+            Hence other use of the <code>.</code> (dot) operator is to
+            initialize the value of variable for that instance.
+          </li>
+        </ul>
+        <br /><br />
+        <h1 id="head19">Constructor</h1>
+        <br />
+        <ul>
+          <li>
+            Constructor is <strong>special member function</strong> of the
+            class.
+          </li>
+          <li>The name of a constructor must be the name of the class.</li>
+          <li>
+            Constructor is <strong>used to initialize the values</strong> to the
+            data member of the class.
+          </li>
+          <li>
+            Constructor have <strong>no return type</strong>, even we cannot
+            write even void before constructor.
+          </li>
+          <li>
+            Constructor is <strong>called when object is created</strong>.
+            Constructor can&#39;t be called explicitly.
+          </li>
+          <li>
+            Constructor <strong>can be private, public or protected</strong>.
+            Constructors cannot be abstract, final, native, static, or
+            synchronized.
+          </li>
+          <li>
+            Just like member functions, constructors
+            <strong>can also be overloaded</strong> in a class.
+          </li>
+          <li>Constructor can be invoked called by its derived class.</li>
+        </ul>
+        <br />
+        <p>Types of Constructor:</p>
+        <br />
+        <ul>
+          <li>
+            <strong>Without Argument Constructor:</strong>
+            <ul>
+              <li>
+                If we don&#39;t want to pass any value at the time of creation
+                of the object and want to initialize something that time we can
+                create without argument constructor.
+              </li>
+              <li>
+                Constructor without parameter or say argument is known as
+                without argument constructor.
+              </li>
+              <li>
+                Objects which call without argument constructor have same values
+                in its field.
+              </li>
+            </ul>
+          </li>
+          <br />
+          <li>
+            <strong>With Argument Constructor:</strong>
+            <ul>
+              <li>
+                With Argument Constructor also known as parameterized
+                constructor.
+              </li>
+              <li>
+                Parameterized constructors are required to pass parameters on
+                creation of objects.
+              </li>
+              <li>
+                Here all the objects have different unique distinct copies.
+              </li>
+              <li>
+                Because they passed value at the time of calling parameterized
+                constructor.
+              </li>
+            </ul>
+          </li>
+          <br />
+          <li>
+            <strong>Default Constructor:</strong>
+            <ul>
+              <li>
+                If we don&#39;t define a constructor, then the compiler creates
+                a default constructor. This generated constructor is called a
+                default constructor.
+              </li>
+              <li>
+                It&#39;s not visible in our code, but it&#39;s there just the
+                same.
+              </li>
+              <li>
+                Remember Default constructors are created only if there are no
+                constructors defined by us.
+              </li>
+              <li>
+                If we do write a constructor for our class, Java does not
+                generate a default constructor.
+              </li>
+              <li>
+                Default constructors initialize 0 to all the numeric and NULL to
+                all the objects.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <a class="dlbtn" href="assets/pdfs/Java01.pdf"
+      ><img src="assets/img/download.png" height="50px"
+    /></a>
+    <div class="end">
+      <div class="footer">
+        <p>
+          Made by <a href="../about.html"><u>SOU Student</u></a> For SOU
+          Students
+        </p>
+      </div>
+    </div>
+    <script src="../assets/js/global.js"></script>
+    <script src="assets/js/prism.js"></script>
+  </body>
+</html>

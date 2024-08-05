@@ -25,6 +25,7 @@ html[data-theme="light"] {
   --bread-color: #a8aab1;
   --shadow-color: rgba(0, 0, 0, 0.281);
   --border-color: rgba(0, 0, 0, 0.123);
+  --table-border: #202030;
 }
 
 html[data-theme="dark"] {
@@ -44,6 +45,7 @@ html[data-theme="dark"] {
   --bread-color: #a6adc8;
   --shadow-color: rgba(180, 190, 254, 0.281);
   --border-color: rgba(180, 190, 254, 0.185);
+  --table-border: #eef0f4;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -63,6 +65,7 @@ html[data-theme="dark"] {
     --nav-bgcolor: #11111b;
     --title-color: #b4befe;
     --bread-color: #a6adc8;
+    --table-border: #eef0f4;
   }
 
   html[data-theme="light"] {
@@ -80,6 +83,7 @@ html[data-theme="dark"] {
     --nav-bgcolor: #dce0e8;
     --title-color: #768afd;
     --bread-color: #a8aab1;
+    --table-border: #202030;
   }
 }
 
