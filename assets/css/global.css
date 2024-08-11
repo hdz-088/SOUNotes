@@ -126,7 +126,7 @@ nav {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 1001;
 }
 
 .logo {
@@ -169,7 +169,7 @@ h1 {
 
 h4 {
   color: var(--h1-color);
-  font-size: 20px;
+  font-size: 22px;
   font-family: "Syne", sans-serif;
 }
 
