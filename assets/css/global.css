@@ -167,6 +167,12 @@ h1 {
   font-family: "Syne", sans-serif;
 }
 
+h4 {
+  color: var(--h1-color);
+  font-size: 20px;
+  font-family: "Syne", sans-serif;
+}
+
 #bigbox {
   display: flex;
   flex-direction: column;
