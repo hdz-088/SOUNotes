@@ -214,7 +214,7 @@ header .current-date {
   color: #aaaaaa94;
 }
 .days li.active {
-  color: #000;
+  color: #000 !important;
 }
 .days li::before {
   position: absolute;
@@ -229,12 +229,11 @@ header .current-date {
 }
 .days li.active::before {
   background: var(--toc-bgcolor);
-  color: #000;
+  color: #000 !important;
 }
 .days li:not(.active):hover::before {
   background: var(--toc-bgcolor);
-  color: #000;
-  text-decoration: line-through;
+  color: #000 !important;
 }
 
 .sunday {
@@ -242,8 +241,29 @@ header .current-date {
 }
 
 .sunday & .active {
-  color: var(--text-color);
+  color: #000 !important;
   background: rgb(253, 95, 95);
+}
+
+.holiday,
+.meeting,
+.birthday {
+  color: #000 !important;
+}
+
+.holiday::before {
+  background: var(--toc-bgcolor);
+  color: #000;
+}
+
+.meeting::before {
+  background: greenyellow;
+  color: #000;
+}
+
+.birthday::before {
+  background: red;
+  color: #000;
 }
 
 /* Media Queries */

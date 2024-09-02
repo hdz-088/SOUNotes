@@ -27,7 +27,9 @@ const months = [
 
 // Function to fetch events from the JSON file
 async function fetchEvents() {
-  const response = await fetch("events.json");
+  const response = await fetch(
+    "https://raw.githubusercontent.com/hdz-088/SOUNotes/feature/academic-calendar/calendar/assets/js/events.json"
+  );
   const events = await response.json();
   return events;
 }
@@ -36,7 +38,7 @@ async function fetchEvents() {
 const renderCalendar = async () => {
   const events = await fetchEvents(); // Fetch events from the JSON file
 
-  let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // getting first day of month
+  let firstDayofMonth = new Date(currYear, currMonth, 0).getDay(), // getting first day of month
     lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(), // getting last date of month
     lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(), // getting last day of month
     lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); // getting last date of previous month
@@ -73,7 +75,7 @@ const renderCalendar = async () => {
     liTag += `<li class="${isToday} ${isSunday} ${eventClass}">${i}</li>`;
   }
 
-  for (let i = lastDayofMonth; i < 6; i++) {
+  for (let i = lastDayofMonth; i <= 6; i++) {
     // creating li of next month first days
     liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`;
   }
@@ -89,23 +91,23 @@ const renderCalendar = async () => {
 const colorSundays = () => {
   const sundays = document.querySelectorAll(".sunday");
   sundays.forEach((sunday) => {
-    sunday.style.color = "red"; // Apply red font color to Sundays
+    sunday.style.color = "rgb(253, 95, 95)"; // Apply red font color to Sundays
   });
 };
 
 // Function to style events based on their type
-const styleEvents = () => {
-  const events = document.querySelectorAll(".holiday, .meeting, .birthday");
-  events.forEach((event) => {
-    if (event.classList.contains("holiday")) {
-      event.style.backgroundColor = "lightgreen";
-    } else if (event.classList.contains("meeting")) {
-      event.style.backgroundColor = "lightblue";
-    } else if (event.classList.contains("birthday")) {
-      event.style.backgroundColor = "lightcoral";
-    }
-  });
-};
+// const styleEvents = () => {
+//   const events = document.querySelectorAll(".holiday, .meeting, .birthday");
+//   events.forEach((event) => {
+//     if (event.classList.contains("holiday")) {
+//       event.style.backgroundColor = "lightgreen";
+//     } else if (event.classList.contains("meeting")) {
+//       event.style.backgroundColor = "lightblue";
+//     } else if (event.classList.contains("birthday")) {
+//       event.style.backgroundColor = "lightcoral";
+//     }
+//   });
+// };
 
 renderCalendar();
 
@@ -124,3 +126,43 @@ prevNextIcon.forEach((icon) => {
     renderCalendar(); // calling renderCalendar function
   });
 });
+
+// LEFT CONTAINER
+
+const renderEvents = async () => {
+  const events = await fetchEvents(); // Fetch events from JSON file
+  const mainContainer = document.querySelector(".timeline"); // Select your main container where events will be appended
+
+  events.forEach((event, index) => {
+    const { title, from, to, description, type } = event;
+
+    // Format the date string based on 'from' and 'to'
+    const dateText = from === to ? from : `${from} to ${to}`;
+
+    // Determine if this is a left or right container
+    const isLeft = index % 2 === 0;
+    const containerClass = isLeft ? "left-container" : "right-container";
+    const arrowClass = isLeft
+      ? "left-container-arrow"
+      : "right-container-arrow";
+
+    // Create a new div element for the event
+    const eventDiv = document.createElement("div");
+    eventDiv.classList.add("container", containerClass, type); // Add event type as a class
+
+    // Create the inner HTML structure
+    eventDiv.innerHTML = `
+      <div class="text-box">
+        <h2>${title}</h2>
+        <small>${dateText}</small>
+        <p>${description}</p>
+        <span class="${arrowClass}"></span>
+      </div>
+    `;
+
+    // Append the event to the main container
+    mainContainer.appendChild(eventDiv);
+  });
+};
+
+renderEvents();

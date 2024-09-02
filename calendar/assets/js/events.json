@@ -1,17 +1,23 @@
 [
   {
-    "date": "2024-09-05",
-    "type": "holiday",
-    "description": "Labor Day"
+    "title": "Ganesh Chaturthi",
+    "from": "2024-09-07",
+    "to": "2024-09-07",
+    "description": "",
+    "type": "holiday"
   },
   {
-    "date": "2024-09-10",
-    "type": "meeting",
-    "description": "Team Meeting"
+    "title": "Personal Project",
+    "from": "2020",
+    "to": "2020",
+    "description": "Developed a personal project focused on machine learning.",
+    "type": "project"
   },
   {
-    "date": "2024-09-21",
-    "type": "birthday",
-    "description": "John's Birthday"
+    "title": "Startup X",
+    "from": "2017",
+    "to": "2018",
+    "description": "Led a team in developing an innovative AI product.",
+    "type": "work"
   }
 ]
