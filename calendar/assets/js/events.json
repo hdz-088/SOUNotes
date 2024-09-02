@@ -1,0 +1,17 @@
+[
+  {
+    "date": "2024-09-05",
+    "type": "holiday",
+    "description": "Labor Day"
+  },
+  {
+    "date": "2024-09-10",
+    "type": "meeting",
+    "description": "Team Meeting"
+  },
+  {
+    "date": "2024-09-21",
+    "type": "birthday",
+    "description": "John's Birthday"
+  }
+]
