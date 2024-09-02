@@ -13,6 +13,7 @@
       type="image/x-icon"
     />
   </head>
+
   <body>
     <nav>
       <a href="../about.html"
@@ -611,7 +612,63 @@
           </li>
         </ol>
         <br /><br />
-        <h1 id="head9">First Flutter Application</h1>
+        <h1 id="head9">Gestures</h1>
+        <br />
+        <ul>
+          <li>
+            It is a widget that provides interaction (how to listen for and
+            respond to) in Flutter using <strong>GestureDetector</strong>.
+            GestureDetector is an invisible widget, which includes tapping,
+            dragging, and scaling interaction of its child widget. We can also
+            use other interactive features into the existing widgets by
+            composing with the GestureDetector widget.
+          </li>
+        </ul>
+        <br /><br />
+        <h1 id="head10">State Management</h1>
+        <br />
+        <ul>
+          <li>
+            Flutter widget maintains its state by using a special widget,
+            StatefulWidget. It is always auto re-rendered whenever its internal
+            state is changed. The re-rendering is optimised by calculating the
+            distance between old and new widget UI and render only necessary
+            things that are changes.
+          </li>
+        </ul>
+        <br /><br />
+        <h1 id="head11">Layers</h1>
+        <br />
+        <div class="images">
+          <img src="assets/img/flu0a.jpg" alt="" width="90%" />
+        </div>
+        <br />
+        <ul>
+          <li>
+            Layers are an important concept of the Flutter framework, which are
+            grouped into multiple categories in terms of complexity and arranged
+            in the top-down approach.
+          </li>
+          <li>
+            The topmost layer is the <strong>UI</strong> of the application,
+            which is specific to the Android and iOS platforms.
+          </li>
+          <li>
+            The second topmost layer contains all the Flutter
+            <strong>native widgets</strong>.
+          </li>
+          <li>
+            The next layer is the <strong>rendering</strong> layer, which
+            renders everything in the Flutter app.
+          </li>
+          <li>
+            Then, the layers go down to Gestures, foundation library, engine,
+            and finally, core platform-specific code. The following diagram
+            specifies the layers in Flutter app development.
+          </li>
+        </ul>
+        <br /><br />
+        <h1 id="head12">First Flutter Application</h1>
         <br />
         <ul>
           <li><strong>Step-01:</strong> Open Android Studio</li>
@@ -659,9 +716,122 @@
             <strong>Step-06:</strong> To run application, go to
             <code>Run -&gt; Run main.dart</code>
           </li>
+          <br />
+          <li>
+            <strong>Step-07:</strong> Open the <code>main.dart</code> file and
+            replace the code with the following code snippets.
+          </li>
         </ul>
+        <br />
+        <pre><code class="lang-Dart">
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+	@override
+	Widget build(BuildContext context) {
+		return MaterialApp(
+			title: 'My Flutter App',
+			home: MyHomePage(),
+		);
+	}
+}
+
+class MyHomePage extends StatelessWidget {
+	@override
+	Widget build(BuildContext context) {
+		return Scaffold(
+			appBar: AppBar(
+			title: Text(“This is my First Flutter App”),
+		),
+		body: Center(
+			child: Text('Namastey World !',),
+			),
+		);
+	}
+}
+      </code></pre>
+        <br />
+        <ul>
+          <li>
+            <strong>Step-08</strong>: Let us understand the above code snippet
+            line by line.
+          </li>
+          <ul>
+            <br />
+            <li>
+              Here, we have imported a <strong>Material</strong>
+              <strong>package</strong>. This package allows you to create user
+              interface according to the Material design guidelines specified by
+              Android.
+            </li>
+            <br />
+            <li>
+              The second line is an <strong>entry point</strong> of the Flutter
+              applications similar to the main method in other programming
+              languages. It calls the <strong>runApp</strong> function and pass
+              it an object of <strong>MyApp</strong> The primary purpose of this
+              function is to attach the given widget to the screen.
+            </li>
+            <br />
+            <li>
+              Line 5 to 18 is a widget used for creating UI in the Flutter
+              framework. Here, the <strong>StatelessWidget</strong> does not
+              maintain any state of the widget. <strong>MyApp</strong> extends
+              StatelessWidget that overrides its <strong>build</strong> The
+              build method is used for creating a part of the UI of the
+              application. In this block, the build method uses MaterialApp, a
+              widget to create the root level UI of the application and contains
+              three properties - title, theme, and home.
+            </li>
+          </ul>
+        </ul>
+        <ul>
+          <br />
+          <li>
+            <strong>Title:</strong> It is the title of the Flutter application.
+          </li>
+          <br />
+          <li>
+            <strong>Theme:</strong> It is the theme of the widget. By default,
+            it set the blue as the overall colour of the application.
+          </li>
+          <br />
+          <li>
+            <strong>Home:</strong> It is the inner UI of the application, which
+            sets another widget (MyHomePage) for the application.
+          </li>
+          <br />
+          <li>
+            <strong>MyHomePage</strong> is similar to MyApp, except it will
+            return the <strong>Scaffold</strong> Scaffold widget is a top-level
+            widget after the MaterialApp widget for creating the user interface.
+            This widget contains two properties <strong>appBar</strong> and
+            <strong>body</strong>. The appBar shows the header of the app, and
+            body property shows the actual content of the application.
+          </li>
+          <br />
+          <li>
+            <strong>AppBar</strong> render the header of the application,
+            <strong>Center</strong> widget is used to center the child widget,
+            and <strong>Text</strong> is the final widget used to show the text
+            content and displays in the center of the screen.
+          </li>
+          <br />
+        </ul>
+        <ul>
+          <li>
+            <strong>Step-09</strong>: Now, run the application. To do this, go
+            to <code>Run -&gt; Run main.dart</code>
+          </li>
+        </ul>
+        <br />
+        <div class="images">
+          <img src="assets/img/flu0b.png" alt="" width="90%" />
+        </div>
         <br /><br />
-        <h1 id="head10">Flutter Folder Structure</h1>
+        <h1 id="head13">Flutter Folder Structure</h1>
         <br />
         <div class="images">
           <img
@@ -865,6 +1035,110 @@
           </li>
         </ul>
         <br />
+        <h1 id="head14">
+          Flutter Application Architecture With Layered Approach
+        </h1>
+        <br />
+        <p>
+          Flutter applications can benefit from a layered architecture, which
+          separates concerns and promotes code maintainability.
+        </p>
+        <br />
+        <div class="images">
+          <img src="assets/img/flu0c.png" alt="" height="600px" />
+        </div>
+        <br />
+        <ol>
+          <li>
+            <strong>Presentation Layer (UI):</strong><br />
+            <ul>
+              <li>This layer deals with how the app looks and feels.</li>
+              <li>
+                It utilizes Flutter&#39;s widgets to build the user interface
+                (UI) elements.
+              </li>
+              <li>
+                This layer is built using stateless or stateful widgets
+                depending on data requirements.
+              </li>
+              <li>
+                It interacts with the application layer to request data or
+                trigger actions.
+              </li>
+            </ul>
+          </li>
+          <br />
+          <li>
+            <strong>Application layer (Business Logic):</strong><br />
+            <ul>
+              <li>
+                This layer handles the core business logic of the app. It
+                manages user interactions, data validation, and application
+                flow.
+              </li>
+              <li>
+                It interacts with the domain layer to access and manipulate data
+                relevant to the app&#39;s functionality.
+              </li>
+              <li>
+                This layer might use state management solutions like Provider,
+                BLoC, or Scoped Model to manage application state.
+              </li>
+            </ul>
+          </li>
+          <br />
+          <li>
+            <strong>Domain Layer (Models &amp; Rules):</strong><br />
+            <ul>
+              <li>
+                This layer represents the core domain concepts and rules of the
+                app.
+              </li>
+              <li>
+                It defines data models (classes) that represent entities like
+                users, products, or tasks.
+              </li>
+              <li>
+                It encapsulates business logic rules specific to the app&#39;s
+                domain
+              </li>
+              <li>
+                This layer interacts with the data layer to fetch and store
+                data.
+              </li>
+            </ul>
+          </li>
+          <br />
+          <li>
+            <strong>Data Layer (Persistence):</strong><br />
+            <ul>
+              <li>This layer handles data persistence and retrieval.</li>
+              <li>
+                It interacts with local databases (e.g., Hive, SQlite) or remote
+                APIs (e.g., using HTTP libraries) to access and store data.
+              </li>
+              <li>
+                It retrieves and stores data based on requests from the domain
+                layer.
+              </li>
+              <li>
+                This layer should strive for data abstraction, allowing
+                switching between data sources without affecting the rest of the
+                app.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <br /><br />
+        <h1 id="head15">Questions</h1>
+        <br />
+        <ol>
+          <li>What is Flutter? Explain features of Flutter.</li>
+          <li>Write advantages and disadvantages of Flutter.</li>
+          <li>Name applications which are developed using Flutter.</li>
+          <li>Discuss architecture of Flutter application.</li>
+          <li>Explain File and Folder structure of Flutter application</li>
+        </ol>
       </div>
     </main>
     <a class="dlbtn" href="assets/pdfs/Flutter01.pdf"

@@ -116,10 +116,20 @@ td {
   padding: 0.1em 0.5em;
 }
 
+.toolbar{
+  color: var(--text-color) !important;
+  
+}
+
+pre {
+  border: 1px solid var(--border-color);
+}
+
 pre,
 code {
   border-radius: 15px;
   font-family: "JetBrains Mono", monospace;
+  background: var(--code-bgcolor) !important;
 }
 
 @media (min-width: 768px) {
@@ -148,5 +158,8 @@ code {
   }
   .card {
     height: 400px;
+  }
+  pre code {
+    font-size: 14px !important;
   }
 }
