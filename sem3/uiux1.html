@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit-01 | UIUX | SOUNotes</title>
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/sem3.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.png"
+      type="image/x-icon"
+    />
+    <style>
+      strong {
+        color: #deb0d4;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="../about.html"
+        ><img
+          class="menubar"
+          src="assets/img/favicon.png"
+          alt="menu"
+          height="28px"
+      /></a>
+      <a class="logo" href="../index.html">SOU BCA Notes</a>
+      <a id="theme-toggle" onclick="modeSwitcher()">
+        <img
+          class="dlmode"
+          id="theme-image"
+          src="assets/img/light.png"
+          alt="mode"
+          height="28px"
+      /></a>
+    </nav>
+    <div id="breadcrumbs">
+      <a href="../index.html"><u>Home</u></a
+      >/ <a href="sem3.html"><u>Sem-III</u></a
+      >/ <a href="sem3.html#tmp"><u>UIUX</u></a
+      >/ <a href="tmp1.html"><u>01: Foundation of UIUX</u></a
+      >/
+    </div>
+    <main>
+      <div class="toc">
+        <center><b>Table of Content</b></center>
+        <br />
+        01: <u><a href="#head01">Introduction</a><br /></u> 02:
+        <u><a href="#head02">User Research &amp; Analysis</a><br /></u>
+        03: <u><a href="#head03">Questions</a><br /></u> 04:
+        <u><a href="#head04">Case Study</a><br /></u>
+      </div>
+      <div class="page">
+        <h1 id="head01">Introduction</h1>
+        <br />
+        <h4 id="what-is-user-interface-">What is User Interface?</h4>
+        <ul>
+          <li>
+            It refers to the graphical layout and interactive elements that a
+            user interacts with in a software application or website.
+          </li>
+          <li>
+            User Interface (UI) Design is the creation of graphics,
+            illustrations, and the use of photographic artwork and typography to
+            enhance the display and layout of a digital product within its
+            various device views.
+          </li>
+          <li>Example: Buttons, Menus, Icons, and other visual elements.</li>
+        </ul>
+        <br />
+        <h4 id="advantages-of-ui-design">Advantages of UI Design</h4>
+        <ul>
+          <li>
+            No need to learn complex commands/languages for working with UI.
+          </li>
+          <li>
+            Easiness for non-technical people. A beginner can navigate through a
+            site with ease if it is simple and well informative.
+          </li>
+          <li>Usage of blocks and typography makes user experience better.</li>
+          <li>
+            Easy setup and ready to start working are awesome. Hiding the
+            complexity of actions from the user and display only the required
+            information is key to good interface.
+          </li>
+        </ul>
+        <br />
+        <h4 id="disadvantages-of-ui-design">Disadvantages of UI Design</h4>
+        <ul>
+          <li>
+            When not properly built, it can be very difficult to work with.
+          </li>
+          <li>Takes time to build a Perfect UI Design.</li>
+          <li>
+            May lack customization options, preventing users from adapting the
+            interface to their preferences or workflow.
+          </li>
+        </ul>
+        <br />
+        <h4 id="what-is-user-experience-">What is User Experience?</h4>
+        <ul>
+          <li>
+            User Experience (UX) is the holistic journey users traverse as they
+            use a product.
+          </li>
+          <li>
+            Not only does it include their direct interactions with the product,
+            but also how it fits in with their overall task completion process.
+          </li>
+          <li>
+            Regardless of whether different aspects of the experience are under
+            the direct control of the product or are merely associated with the
+            product, the total experience is considered part of the UX from the
+            user’s perspective.
+          </li>
+          <li>
+            Every touchpoint between the customer and the company is included in
+            the total User Experience.
+          </li>
+        </ul>
+        <br />
+        <h4 id="types-of-user-experience-ux-">Types of User Experience (UX)</h4>
+        <ul>
+          <li>
+            <strong>Interaction Design (IxD):</strong> Focuses on the design of
+            interactive elements and how users engage with a product. This
+            includes the layout of buttons, controls, and how users navigate
+            through the system. Interaction design aims to create intuitive and
+            effective interfaces that facilitate smooth and enjoyable user
+            interactions.
+          </li>
+          <li>
+            <strong>Information Architecture (IA):</strong> Deals with
+            organizing and structuring information within a product or service.
+            IA ensures that users can easily find and access the information
+            they need. This involves creating clear navigation systems,
+            hierarchical structures, and categorization of content to enhance
+            usability and findability.
+          </li>
+          <li>
+            <strong>Visual Design:</strong> Concerned with the aesthetics and
+            appearance of a product. Visual design includes elements such as
+            color schemes, typography, imagery, and overall layout. The goal is
+            to create a visually appealing and cohesive design that aligns with
+            the brand and enhances the user experience.
+          </li>
+          <li>
+            <strong>Usability:</strong> Focuses on how easy and efficient it is
+            for users to accomplish their goals using a product. Usability
+            involves evaluating factors like ease of learning, task efficiency,
+            error frequency, and user satisfaction. Good usability ensures that
+            users can interact with a product effectively without unnecessary
+            frustration.
+          </li>
+          <li>
+            <strong>User Research:</strong> Involves gathering insights about
+            users’ needs, behaviors, and preferences through various methods
+            like interviews, surveys, and usability testing. User research helps
+            inform design decisions and ensures that the product meets the
+            actual needs and expectations of its target audience. 6.
+          </li>
+        </ul>
+        <br />
+        <h4 id="what-s-the-relationship-between-ui-and-ux-">
+          What’s the relationship between UI and UX?
+        </h4>
+        <ul>
+          <li>Good UI makes the product easy to use and visually appealing.</li>
+          <li>
+            Good UX ensures that the product meets user needs and provides a
+            smooth, intuitive experience.
+          </li>
+          <li>UI and UX closely related but distinct aspects of design.</li>
+          <li>UI focuses on the visual and interactive components</li>
+          <li>
+            UX is concerned with the overall user experience and satisfaction.
+          </li>
+        </ul>
+        <br />
+        <h4 id="key-components-of-ui-design">Key Components of UI Design</h4>
+        <ul>
+          <li>
+            <strong>Layout</strong>: The arrangement of visual elements on a
+            page.
+          </li>
+          <li>
+            <strong>Icons and Imagery</strong>: Visual symbols and images that
+            aid navigation.
+          </li>
+          <li>
+            <strong>Interactive Elements</strong>: Components like buttons,
+            sliders, and forms that allow users to engage with the interface.
+          </li>
+          <li>
+            <strong>Colour Scheme</strong>: he selection of colours used in the
+            interface.
+          </li>
+          <li>
+            <strong>Typography</strong>: The style and appearance of text.
+          </li>
+          <li>
+            <strong>Consistency</strong>: Maintaining uniformity in design
+            elements
+          </li>
+        </ul>
+        <br />
+        <h4 id="key-components-of-ux-design">Key Components of UX Design</h4>
+        <ul>
+          <li>
+            <strong>User Research</strong>: Understanding user needs through
+            interviews, surveys, and observations.
+          </li>
+          <li>
+            <strong>Information Architecture:</strong> Structuring and
+            organizing content.
+          </li>
+          <li>
+            <strong>Wireframing</strong>: Creating representations of the
+            interface.  Prototyping: Building interactive models of the design.
+          </li>
+          <li>
+            <strong>Usability</strong> <strong>Testing</strong>: Evaluating the
+            product with real users to identify issues.
+          </li>
+          <li>
+            <strong>Iterative Design</strong>: Continuously refining the design
+            based on user feedback and testing results
+          </li>
+        </ul>
+        <br />
+        <h4 id="what-is-the-importance-of-ui-ux-design-">
+          What is the importance of UI/UX design?
+        </h4>
+        <ul>
+          <li>User satisfaction through user-friendly designs.</li>
+          <li>Brand loyalty</li>
+          <li>
+            Improved accessibility ensures that all users, including those with
+            disabilities, can interact with the product effectively.
+          </li>
+          <li>Higher conversion rates.</li>
+        </ul>
+        <br />
+        <h4 id="what-are-the-3-user-centered-principles-">
+          What are the 3 User-Centered Principles?
+        </h4>
+        <ul>
+          <li>
+            <strong>Empathy</strong>: This principle involves deeply
+            understanding the user&#39;s needs, preferences, and pain points. By
+            putting yourself in the users&#39; shoes, you can design solutions
+            that genuinely address their problems and enhance their experience.
+            Empathy requires gathering qualitative data through methods like
+            user interviews, observations, and surveys to gain insights into
+            user behaviour and emotions.
+          </li>
+          <li>
+            <strong>Involvement</strong>: Engaging users throughout the design
+            process ensures that their feedback and perspectives are integrated
+            into the development of the product. This involves activities like
+            user testing, co-design sessions, and regular feedback loops.
+            Involvement helps align the product with user expectations and
+            allows for adjustments based on real-world usage.
+          </li>
+          <li>
+            <strong>Iteration</strong>: This principle highlights the importance
+            of refining and improving designs through an iterative process.
+            Prototypes are tested and evaluated, and feedback from users is used
+            to make iterative enhancements. Continuous iteration helps identify
+            issues early, adapt to changing user needs, and ultimately produce a
+            more effective and user-friendly product.
+          </li>
+        </ul>
+        <br />
+        <h4 id="benefits-of-user-centered-design-">
+          Benefits of User-Centered Design?
+        </h4>
+        <ul>
+          <li>
+            <strong>Reduced Development Costs</strong>: Identifying user issues
+            early in the design process helps to avoid costly revisions and
+            redesigns later. By catching and addressing usability problems
+            during prototyping and testing phases, teams can prevent expensive
+            changes after the product is fully developed, leading to more
+            efficient use of resources.
+          </li>
+          <li>
+            <strong>Better Product-Market Fit</strong>: By focusing on user
+            needs and preferences, designs are more likely to align with market
+            demands. This results in products that resonate with users, meet
+            their expectations, and address their pain points effectively,
+            leading to a stronger market fit.
+          </li>
+          <li>
+            <strong>Enhanced Usability:</strong> User-centered design emphasizes
+            creating products that are intuitive and user-friendly. This leads
+            to a smoother user experience, where users can achieve their goals
+            more efficiently and with fewer errors, thereby improving overall
+            satisfaction.
+          </li>
+          <li>
+            <strong>Higher User Retention</strong>: When users are satisfied
+            with their experience, they are more likely to return to the product
+            and remain engaged over time. This increased loyalty can lead to
+            higher retention rates and positive wordof-mouth recommendations,
+            which are crucial for long-term success.
+          </li>
+        </ul>
+        <br />
+        <h4 id="ui-ux-design-process-">UI/UX design process?</h4>
+        <ul>
+          <li>
+            <strong>Research</strong>: Understand user needs &amp; market
+            demands through surveys, interviews, and feedback.
+          </li>
+          <li>
+            <strong>Design</strong>: Create wireframes, prototypes, and visual
+            designs based on insights from research.
+          </li>
+          <li>
+            <strong>Testing</strong>: Conduct usability tests with real users to
+            gather feedback on designs
+          </li>
+          <li>
+            <strong>Iteration</strong>: Refine designs based on insights from
+            testing.
+          </li>
+        </ul>
+        <br />
+        <h4 id="how-to-understand-user-needs-">
+          How to understand user needs?
+        </h4>
+        <ul>
+          <li>
+            <strong>User Personas</strong>: It represents different user types.
+            Example: Demographics, behaviours, and motivations of the user.
+          </li>
+          <li>
+            <strong>User Scenarios</strong>: It describes how users interact
+            with a product.
+          </li>
+          <li>
+            <strong>Journey Maps</strong>: Journey maps are visual
+            representations of a user&#39;s experience over time.
+          </li>
+        </ul>
+        <br />
+        <h4 id="how-to-conduct-user-research-">
+          How to conduct user research?
+        </h4>
+        <ul>
+          <li>
+            <strong>Surveys</strong>
+            <ul>
+              <li>
+                Purpose: To collect quantitative data from a larger audience to
+                identify trends, preferences, and opinions.
+              </li>
+              <li>
+                Analyze: Examine the responses to identify patterns and
+                insights. Use statistical analysis to understand trends and
+                correlations.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Interviews</strong>
+            <ul>
+              <li>
+                <strong>Purpose</strong>: To gain in-depth insights into
+                individual users&#39; experiences, needs, and motivations.
+              </li>
+              <li>
+                <strong>Conduct Interviews</strong>: Engage with users
+                one-on-one, either in person or remotely, to explore their
+                experiences and opinions.
+              </li>
+              <li>
+                <strong>Record and Analyze</strong>: Record the interviews (with
+                permission) and transcribe the conversations for analysis.
+                Identify key themes and insights.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Observation</strong>
+            <ul>
+              <li>
+                <strong>Purpose</strong>: To understand how users interact with
+                a product or perform tasks in their natural environment.
+              </li>
+              <li>
+                <strong>Plan Observations</strong>: Determine what you want to
+                observe and where (e.g., users interacting with a prototype or
+                using a product in a real-world setting).
+              </li>
+              <li>
+                <strong>Conduct Observations</strong>: Watch users without
+                interfering, taking detailed notes on their behavior,
+                challenges, and interactions.
+              </li>
+              <li>
+                <strong>Analyze Findings</strong>: Review your notes to identify
+                patterns and issues in user behavior.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Focus Groups</strong>
+            <ul>
+              <li>
+                <strong>Purpose</strong>: To gather diverse opinions and
+                feedback from a group of users through group discussion.
+              </li>
+              <li>
+                <strong>Recruit Participants</strong>: Select a representative
+                group of users for the focus group.
+              </li>
+              <li>
+                <strong>Facilitate Discussion</strong>: Lead the group through
+                guided discussions on specific topics or questions.
+              </li>
+              <li>
+                <strong>Analyze Data</strong>: Record the session and analyze
+                the discussion to identify
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <br /><br />
+        <h1 id="head02">User Research &amp; Analysis</h1>
+        <br />
+        <h4 id="what-is-user-research-and-analysis-">
+          What is User Research and Analysis?
+        </h4>
+        <ul>
+          <li>
+            User research and analysis are critical steps in the design process,
+            aiming to understand the needs, behaviors, and motivations of users.
+            These processes guide the creation of products, services, and
+            systems that are user centered, ensuring that they meet the real
+            needs of the target audience.
+          </li>
+        </ul>
+        <br />
+        <h4 id="what-is-the-importance-of-user-research-">
+          What is the Importance of User Research?
+        </h4>
+        <ul>
+          <li>
+            <strong>Informed Design Decisions</strong>: User research provides
+            data that helps designers make informed decisions rather than
+            relying on assumptions. It reduces the risk of developing products
+            that don’t meet user needs.
+          </li>
+          <li>
+            <strong>Improved User Experience</strong>: By understanding
+            users&#39; pain points, goals, and behaviors, designers can create
+            products that offer a seamless and satisfying experience.
+          </li>
+          <li>
+            <strong>Increased Product Success</strong>: Products designed with
+            the user in mind are more likely to be successful in the market, as
+            they better align with user expectations and solve real problems.
+          </li>
+          <li>
+            <strong>Cost Efficiency</strong>: Early-stage user research can
+            identify potential issues before they become costly to fix later in
+            the development process.
+          </li>
+        </ul>
+        <br />
+        <h4 id="types-of-user-research">Types of User Research</h4>
+        <ul>
+          <li>
+            <strong>Qualitative Research</strong>: Focuses on understanding user
+            behavior, motivations, and attitudes through methods such as
+            interviews, focus groups, and observations.
+          </li>
+          <li>
+            <strong>Quantitative Research</strong>: Involves collecting
+            numerical data to identify patterns and measure user behaviors.
+            Surveys, questionnaires, and analytics are common methods.
+          </li>
+          <li>
+            <strong>Generative Research</strong>: Conducted at the early stages
+            to explore new opportunities and understand user needs, often
+            leading to the creation of new ideas or products.
+          </li>
+          <li>
+            <strong>Evaluative Research</strong>: Used to assess the
+            effectiveness of an existing product or prototype, often through
+            usability testing or A/B testing.
+          </li>
+        </ul>
+        <br />
+        <h4 id="what-are-the-user-research-methods-">
+          What are the User Research Methods?
+        </h4>
+        <ul>
+          <li>
+            Interviews: In-depth conversations with users to explore their
+            experiences, needs, and pain points. Can be structured,
+            semi-structured, or unstructured.
+          </li>
+          <li>
+            Surveys and Questionnaires: Tools for collecting quantitative data
+            from a large audience. Useful for understanding user demographics,
+            preferences, and behaviors.
+          </li>
+          <li>
+            Focus Groups: Group discussions led by a moderator to gather diverse
+            perspectives on a product or concept. Helpful for understanding
+            social dynamics and group attitudes.
+          </li>
+          <li>
+            Observation: Watching users interact with a product in their natural
+            environment to identify pain points and uncover unarticulated needs.
+          </li>
+          <li>
+            Diary Studies: Participants document their experiences over time,
+            providing insights into their daily interactions and long-term
+            engagement with a product.
+          </li>
+          <li>
+            Usability Testing: Observing users as they complete tasks with a
+            product to identify usability issues and areas for improvement.
+          </li>
+          <li>
+            A/B Testing: Comparing two versions of a product or feature to
+            determine which performs better in terms of user engagement and
+            satisfaction.
+          </li>
+          <li>
+            Card Sorting: A method used to understand how users categorize
+            information, which helps in designing effective navigation
+            structures.
+          </li>
+        </ul>
+        <br />
+        <h4 id="what-are-user-personas-and-its-components-">
+          What are User Personas and its components?
+        </h4>
+        <ul>
+          <li>
+            User personas are fictional characters based on research that
+            represent different user types who might use a product in a similar
+            way. They help designers keep the target audience in mind during the
+            design process.
+          </li>
+          <li>
+            Components of a Persona:
+            <ul>
+              <li>
+                Demographics: Age, gender, occupation, etc. o Goals and Needs:
+                What the user wants to achieve with the product.
+              </li>
+              <li>
+                Behavior Patterns: How the user interacts with products and
+                technology.
+              </li>
+              <li>Pain Points: Challenges and frustrations the user faces.</li>
+              <li>
+                Motivations: Factors driving the user’s decisions and actions.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Benefits:
+            <ul>
+              <li>
+                Empathy: Helps designers empathize with users and create
+                user-centered designs.
+              </li>
+              <li>
+                Alignment: Ensures all team members have a common understanding
+                of who the users are.
+              </li>
+              <li>
+                Decision-Making: Guides design decisions by focusing on the
+                needs and behaviors of the personas.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Purpose
+            <ul>
+              <li>
+                Humanize User Data: Personas make user data relatable,
+                transforming abstract research findings into tangible
+                characters.
+              </li>
+              <li>
+                Guide Design Decisions: Personas help ensure that design
+                decisions remain focused on actual user needs and scenarios,
+                fostering empathy and a user-centered approach.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Significance:
+            <ul>
+              <li>
+                Improved Design Focus: Keeps the design process aligned with the
+                endusers’ needs and behaviors, leading to more effective and
+                user-friendly products.
+              </li>
+              <li>
+                Enhanced Communication: Provides a common language for team
+                members to discuss user needs, facilitating better collaboration
+                across different roles.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <br />
+        <h4 id="what-is-user-journey-mapping-and-its-components-">
+          What is User Journey Mapping and its components?
+        </h4>
+        <ul>
+          <li>
+            A visual representation of the steps users take when interacting
+            with a product or service, highlighting their experiences, pain
+            points, and emotions at each stage.
+          </li>
+          <li>
+            Components:
+            <ul>
+              <li>
+                Stages: Different phases of the user experience (e.g.,
+                awareness, consideration, purchase, usage).
+              </li>
+              <li>
+                Touchpoints: Points of interaction between the user and the
+                product or service.
+              </li>
+              <li>Actions: Specific tasks the user performs at each stage.</li>
+              <li>
+                Emotions: How the user feels at different stages of the journey.
+              </li>
+              <li>Pain Points: Challenges or obstacles the user faces.</li>
+            </ul>
+          </li>
+          <li>
+            Benefits:
+            <ul>
+              <li>
+                Holistic View: Provides a comprehensive view of the user
+                experience across all touchpoints.
+              </li>
+              <li>
+                Identifying Gaps: Helps in identifying areas where the user
+                experience can be improved.
+              </li>
+              <li>
+                Alignment: Ensures that all team members understand the user
+                journey and work towards enhancing it.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <br />
+        <h4 id="analyzing-user-research-data">Analyzing User Research Data</h4>
+        <ul>
+          <li>
+            Affinity Mapping: Grouping research findings based on common themes
+            or patterns. This helps in identifying trends and insights from
+            qualitative data.
+          </li>
+          <li>
+            Thematic Analysis: Identifying recurring themes in user research
+            data, which can inform design decisions and product features.
+          </li>
+          <li>
+            Statistical Analysis: Using statistical methods to analyze
+            quantitative data, such as calculating averages, frequencies, and
+            correlations.
+          </li>
+          <li>
+            Sentiment Analysis: Analyzing user feedback to determine the overall
+            sentiment (positive, negative, or neutral) towards a product or
+            feature.
+          </li>
+          <li>
+            Creating Reports: Summarizing findings in a clear and concise
+            manner, often using visualizations like graphs, charts, and tables
+            to communicate insights effectively.
+          </li>
+        </ul>
+        <br />
+        <h4 id="applying-insights-to-design">Applying Insights to Design</h4>
+        <ul>
+          <li>
+            User-Centered Design (UCD): An iterative design process where the
+            needs, preferences, and limitations of the end-users are given
+            extensive attention at each stage of the design process.
+          </li>
+          <li>
+            Prototyping: Creating low-fidelity or high-fidelity models of the
+            product to test ideas and gather feedback before full-scale
+            development.
+          </li>
+          <li>
+            Iteration: Continuously refining and improving the design based on
+            user feedback and research findings.
+          </li>
+          <li>
+            Collaboration: Working closely with stakeholders, including
+            developers, marketers, and product managers, to ensure that the
+            design aligns with user needs and business goals.
+          </li>
+          <li>
+            Validation: Testing the final product with users to ensure that it
+            meets their needs and provides a satisfactory experience.
+          </li>
+        </ul>
+        <br />
+        <h4 id="what-are-the-challenges-faced-during-user-research-">
+          What are the Challenges faced during User Research?
+        </h4>
+        <ul>
+          <li>
+            Recruitment: Finding and recruiting the right participants who
+            accurately represent the target audience.
+          </li>
+          <li>
+            Bias: Avoiding bias in research methods and data interpretation to
+            ensure that findings are accurate and reliable.
+          </li>
+          <li>
+            Time and Budget Constraints: Balancing the need for thorough
+            research with project deadlines and budget limitations.
+          </li>
+          <li>
+            Changing User Needs: Adapting to changes in user needs and behaviors
+            over time, which may require ongoing research and iteration.
+          </li>
+        </ul>
+        <br /><br />
+        <h1 id="head03">Questions</h1>
+        <ol>
+          <li>
+            Explain the difference between User Interface (UI) and User
+            Experience (UX) design.
+          </li>
+          <li>
+            Describe at least three common types of user research used in UI/UX
+            design.
+          </li>
+          <li>
+            Why is it important to simplify navigation in a digital product?
+          </li>
+        </ol>
+        <br /><br />
+        <h1 id="head04">Case Study</h1>
+        <br />
+        <ul>
+          <li>
+            <strong>Scenario</strong>: Choose a simple app or website that you
+            use regularly. Identify a specific user experience issue that you
+            think could be improved.
+          </li>
+          <li>
+            <strong>Tasks</strong>:
+            <ul>
+              <li>
+                <strong>Background</strong>:
+                <ul>
+                  <li>
+                    Briefly describe what the app or website does and who its
+                    primary users are.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Key Issue</strong>:
+                <ul>
+                  <li>
+                    Identify and describe one key issue that negatively affects
+                    the user experience. For example, it could be confusing
+                    navigation, overwhelming information, or a lack of
+                    personalization.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Proposed Solution</strong>:
+                <ul>
+                  <li>
+                    Suggest a simple redesign or improvement that could address
+                    this issue. Explain how your solution would make the app or
+                    website easier to use or more enjoyable for its users.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p><strong>Example</strong>:</p>
+        <ul>
+          <li>
+            For instance, if you choose a food delivery app, you might identify
+            that users struggle to find their previous orders. You could propose
+            a redesign where the order history is easily accessible from the
+            main menu, making it quicker for users to reorder their favourite
+            meals.
+          </li>
+        </ul>
+        <br />
+      </div>
+    </main>
+    <a class="dlbtn" href="assets/pdfs/UIUX01.pdf"
+      ><img src="assets/img/download.png" height="50px"
+    /></a>
+    <div class="end">
+      <div class="footer">
+        <p>
+          Made by <a href="../about.html"><u>SOU Student</u></a> For SOU
+          Students
+        </p>
+      </div>
+    </div>
+    <script src="../assets/js/global.js"></script>
+  </body>
+</html>
